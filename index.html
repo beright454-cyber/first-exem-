@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva Early Skills - Final Master Exam</title>
+    <style>
+        :root {
+            --bg-pink: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+            --paper-white: rgba(255, 255, 255, 0.95);
+            --deep-pink: #f72585;
+            --text-color: #3d0311;
+        }
+
+        body {
+            background: var(--bg-pink);
+            font-family: 'Arial', sans-serif;
+            font-weight: bold; /* Bold Arial throughout */
+            margin: 0;
+            padding: 15px;
+            color: var(--text-color);
+        }
+
+        .exam-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--paper-white);
+            padding: 40px;
+            border-radius: 35px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            border: 8px solid #ffffff;
+        }
+
+        .header-card {
+            text-align: center;
+            background: #f72585;
+            color: white;
+            padding: 30px;
+            border-radius: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+        }
+
+        .student-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: #ffe3e8;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .q-card {
+            background: white;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 12px solid #f72585;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .q-title {
+            font-size: 22px;
+            color: #f72585;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ffe3e8;
+            padding-bottom: 10px;
+        }
+
+        input[type="text"], textarea {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            border: none;
+            border-bottom: 2px dashed #ff85a1;
+            background: #fffafa;
+            padding: 10px;
+            color: #b71c1c;
+            font-size: 18px;
+            outline: none;
+        }
+
+        textarea { width: 100%; height: 80px; border: 2px solid #ffcad4; border-radius: 10px; }
+
+        .flex-q {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .btn-panel {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .btn {
+            padding: 20px 50px;
+            border-radius: 60px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .btn-submit { background: #4361ee; box-shadow: 0 10px 20px rgba(67, 97, 238, 0.4); }
+        .btn-download { background: #27ae60; box-shadow: 0 10px 20px rgba(39, 174, 96, 0.4); }
+
+        @media print {
+            .btn-panel { display: none !important; }
+            body { background: white; padding: 0; }
+            .exam-container { border: none; box-shadow: none; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="exam-container">
+    <div class="header-card">
+        <h1>🌸 VIVA EARLY SKILLS - ANNUAL MASTER EXAM 🌸</h1>
+        <p>LEVEL: UPPER KG | FULL MARKS: 100 | TIME: 3 HOURS</p>
+    </div>
+
+    <div class="student-details">
+        <div>NAME: <input type="text" style="width: 70%;"></div>
+        <div>ROLL: <input type="text" style="width: 50%;"></div>
+        <div>DATE: <input type="text" value="MARCH 26, 2026" style="width: 50%;"></div>
+    </div>
+
+    <form id="vivaExam">
+
+        <div class="q-card">
+            <div class="q-title">1. WRITE A-Z (CAPITAL CURSIVE) AND a-z (SMALL CURSIVE): ✏️</div>
+            <textarea placeholder="Write A-Z and a-z here..."></textarea>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">2. WORD FAMILIES: MAKE 2 WORDS FOR EACH VOWEL: 🍎</div>
+            <div class="flex-q">
+                <div>a: <input type="text">, <input type="text"></div>
+                <div>e: <input type="text">, <input type="text"></div>
+                <div>i: <input type="text">, <input type="text"></div>
+                <div>o: <input type="text">, <input type="text"></div>
+                <div>u: <input type="text">, <input type="text"></div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">3. FILL IN THE BLANKS WITH 'a' OR 'an': 🖊️</div>
+            <div class="flex-q">
+                <div>___ Apple</div>
+                <div>___ Ball</div>
+                <div>___ Umbrella</div>
+                <div>___ Egg</div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">4. MAKE PAIRS OF WORDS (EXAMPLE: BAT AND BALL): 🔗</div>
+            <div class="flex-q">
+                <div>Lock and <input type="text"></div>
+                <div>Shoes and <input type="text"></div>
+                <div>Cup and <input type="text"></div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">5. WRITE THE RHYMING WORDS: 🤝</div>
+            <div class="flex-q">
+                <div>Cat - <input type="text"></div>
+                <div>Pin - <input type="text"></div>
+                <div>Hot - <input type="text"></div>
+                <div>Bug - <input type="text"></div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">6. USE OF IN, ON, UNDER: 📍</div>
+            <div class="flex-q">
+                <div>The book is ___ the table.</div>
+                <div>The fish is ___ the water.</div>
+                <div>The cat is ___ the chair.</div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">7. USE OF THIS, THAT, THESE, THOSE: 👈</div>
+            <div>___ is my pen. (Near)</div>
+            <div>___ are stars. (Far)</div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">8. WRITE 4 NAMING WORDS (NOUNS): 🏷️</div>
+            <textarea placeholder="Person, Place, Animal, Thing..."></textarea>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">9. WRITE THE OPPOSITES: ↔️</div>
+            <div class="flex-q">
+                <div>Big x <input type="text"></div>
+                <div>Up x <input type="text"></div>
+                <div>Happy x <input type="text"></div>
+                <div>Hot x <input type="text"></div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">10. CHANGE INTO PLURAL (ADD 'S'): ➕</div>
+            <div class="flex-q">
+                <div>Boy - <input type="text"></div>
+                <div>Tree - <input type="text"></div>
+                <div>Pen - <input type="text"></div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">11. USE OF HE OR SHE: 👫</div>
+            <div>___ is my father.</div>
+            <div>___ is a girl.</div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">12. USE OF HAS OR HAVE: 💎</div>
+            <div>I ___ a toy.</div>
+            <div>She ___ a pink dress.</div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">13. FILL WITH WAS OR WERE: 🕰️</div>
+            <div>It ___ a rainy day.</div>
+            <div>They ___ playing.</div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">14. CIRCLE THE DOING WORDS (ACTION WORDS): 🏃</div>
+            <div>(Eat, Sun, Run, Jump, Book, Sleep)</div>
+            <input type="text" placeholder="Write the action words here..." style="width: 100%;">
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">15. WRITE 3 DESCRIBING WORDS (ADJECTIVES): 🌈</div>
+            <input type="text" placeholder="Example: Red, Tall, Small">
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">16. REARRANGE JUMBLED LETTERS: 🧩</div>
+            <div>G, O, D = <input type="text"></div>
+            <div>L, O, O, H, C, S = <input type="text"></div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">17. MAKE SENTENCES WITH: ✍️</div>
+            <div>School: <input type="text" style="width: 80%;"></div>
+            <div>Friend: <input type="text" style="width: 80%;"></div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">18. PARAGRAPH WRITING: ABOUT YOURSELF: 👤</div>
+            <textarea placeholder="My name is... I am... years old. I live in..."></textarea>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">19. PICTURE COMPOSITION: WRITE 3 LINES ABOUT YOUR SCHOOL: 🏫</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="q-card">
+            <div class="q-title">20. NAME YOUR 5 FAVORITE COLORS: 🎨</div>
+            <textarea></textarea>
+        </div>
+
+        <div class="btn-panel">
+            <button type="button" class="btn btn-submit" onclick="alert('Submission Successful!')">✅ SUBMIT EXAM</button>
+            <button type="button" class="btn btn-download" onclick="window.print()">📥 DOWNLOAD PDF</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
